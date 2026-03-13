@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Forge Digital - Web design and IT support for Connecticut small businesses. Local, transparent, built to last.">
-    <title>The Forge Digital | Web Design & IT Support for Connecticut Businesses</title>
+    <meta name="description" content="The Forge Digital - Web design and IT support for small businesses in the Farmington Valley, Connecticut. Local, transparent, built to last.">
+    <title>The Forge Digital | Web Design & IT Support for Farmington Valley Businesses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,10 +17,18 @@
         <div class="nav-container">
             <a href="#" class="logo" aria-label="The Forge Digital - Home">
                 <span class="logo-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 2L4 10V22L16 30L28 22V10L16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                        <path d="M16 8L10 12V20L16 24L22 20V12L16 8Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                        <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                    <!-- Anvil / forge mark with circuit-root detail -->
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 28H28L26 24H10L8 28Z" fill="currentColor" opacity="0.9"/>
+                        <path d="M11 24L13 16H23L25 24" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <path d="M15 16V10C15 8.9 15.9 8 17 8H19C20.1 8 21 8.9 21 10V16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <circle cx="18" cy="12" r="1.5" fill="currentColor"/>
+                        <!-- Root/circuit lines extending from base -->
+                        <path d="M12 28V32" stroke="currentColor" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+                        <path d="M18 28V34" stroke="currentColor" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+                        <path d="M24 28V32" stroke="currentColor" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+                        <path d="M12 32H8" stroke="currentColor" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
+                        <path d="M24 32H28" stroke="currentColor" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
                     </svg>
                 </span>
                 <span class="logo-text">The Forge Digital</span>
@@ -44,14 +52,16 @@
 
     <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="hero">
-        <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
-        <div class="hero-gradient-orb hero-orb-1" aria-hidden="true"></div>
-        <div class="hero-gradient-orb hero-orb-2" aria-hidden="true"></div>
+        <!-- Subtle wood-grain texture overlay -->
+        <div class="hero-texture" aria-hidden="true"></div>
+        <div class="hero-gradient" aria-hidden="true"></div>
 
         <div class="hero-content" data-reveal="fade-up">
             <div class="hero-badge">
-                <span class="badge-dot" aria-hidden="true"></span>
-                Connecticut Web Design & IT Support
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M7 1L8.5 4.5L12 5L9.5 7.5L10 11L7 9.5L4 11L4.5 7.5L2 5L5.5 4.5L7 1Z" fill="currentColor"/>
+                </svg>
+                Farmington Valley Web Design & IT Support
             </div>
             <h1 class="hero-title">
                 Websites that work.<br>
@@ -81,7 +91,7 @@
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                         <path d="M13.3 4L6 11.3L2.7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <span>Local & Responsive</span>
+                    <span>Made Right Here in CT</span>
                 </div>
                 <div class="trust-item">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -109,7 +119,6 @@
             <div class="services-grid">
                 <!-- Website Design -->
                 <article class="service-card" data-reveal="fade-up" data-delay="0">
-                    <div class="card-glow" aria-hidden="true"></div>
                     <div class="service-icon-wrap">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
                             <rect x="2" y="4" width="24" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
@@ -134,7 +143,6 @@
 
                 <!-- Website Care -->
                 <article class="service-card featured" data-reveal="fade-up" data-delay="100">
-                    <div class="card-glow" aria-hidden="true"></div>
                     <div class="featured-badge">Most Popular</div>
                     <div class="service-icon-wrap">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
@@ -156,7 +164,6 @@
 
                 <!-- IT Support -->
                 <article class="service-card" data-reveal="fade-up" data-delay="200">
-                    <div class="card-glow" aria-hidden="true"></div>
                     <div class="service-icon-wrap">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
                             <path d="M10.5 3.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -188,14 +195,14 @@
         <div class="container">
             <header class="section-header" data-reveal="fade-up">
                 <span class="section-label">The Forge Difference</span>
-                <h2 class="section-title">Why Connecticut businesses<br><span class="text-accent">choose us over the rest</span></h2>
+                <h2 class="section-title">Why Farmington Valley businesses<br><span class="text-accent">choose us over the rest</span></h2>
             </header>
 
             <div class="why-grid">
                 <article class="why-card" data-reveal="fade-up" data-delay="0">
                     <div class="why-number" aria-hidden="true">01</div>
-                    <h3>Local Partnership</h3>
-                    <p>A real person in Connecticut you can actually call when things go wrong. Not a chatbot. Not a ticket queue. A person who knows your name and your business.</p>
+                    <h3>Your Neighbor, Not a Chatbot</h3>
+                    <p>A real person right here in Connecticut you can actually call when things go wrong. Not a ticket queue. Not a faceless agency. Someone who knows your name and your business.</p>
                 </article>
                 <article class="why-card" data-reveal="fade-up" data-delay="100">
                     <div class="why-number" aria-hidden="true">02</div>
@@ -205,7 +212,7 @@
                 <article class="why-card" data-reveal="fade-up" data-delay="200">
                     <div class="why-number" aria-hidden="true">03</div>
                     <h3>Built to Last</h3>
-                    <p>We don't do quick fixes or throwaway sites. We design and support businesses that grow, with solid foundations that stand the test of time.</p>
+                    <p>Like the mills that built this valley, we don't do quick fixes or throwaway sites. We build solid foundations that stand the test of time and grow with your business.</p>
                 </article>
                 <article class="why-card" data-reveal="fade-up" data-delay="300">
                     <div class="why-number" aria-hidden="true">04</div>
@@ -218,14 +225,17 @@
             <div class="local-banner" data-reveal="fade-up">
                 <div class="local-banner-content">
                     <div class="local-icon" aria-hidden="true">
+                        <!-- Map pin with tree/root motif -->
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 4C13 4 4 13 4 24C4 35 13 44 24 44C35 44 44 35 44 24C44 13 35 4 24 4Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                            <path d="M24 12V24L32 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 4C16.27 4 10 10.27 10 18C10 28.5 24 44 24 44C24 44 38 28.5 38 18C38 10.27 31.73 4 24 4Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <path d="M24 14V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M20 18L24 14L28 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 22H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                     </div>
                     <div class="local-text">
-                        <h3>Proudly Serving Central Connecticut</h3>
-                        <p>Based in the Farmington Valley, we serve small businesses across central Connecticut. From contractors and salons to restaurants and professional offices -- if you're local, we're your people.</p>
+                        <h3>Proudly Rooted in the Farmington Valley</h3>
+                        <p>Based right here in central Connecticut, we serve small businesses across the valley and beyond. From contractors in Canton to salons in Simsbury, restaurants in Collinsville to offices in Avon -- if you're local, we're your people.</p>
                     </div>
                 </div>
             </div>
@@ -365,8 +375,8 @@
                 <div class="about-content">
                     <span class="section-label">About The Forge Digital</span>
                     <h2 class="section-title">Built different.<br><span class="text-accent">Built for you.</span></h2>
-                    <p>We're a Connecticut-based web design and IT support shop. We help small businesses look professional online and solve everyday tech problems without the headache.</p>
-                    <p>We believe good design and reliable support shouldn't be complicated or expensive. We keep it simple, transparent, and local -- because that's what actually works for small businesses.</p>
+                    <p>We're a Connecticut-based web design and IT support shop, right here in the Farmington Valley. We help small businesses look professional online and solve everyday tech problems without the headache.</p>
+                    <p>We believe good design and reliable support shouldn't be complicated or expensive. No flashy pitches, no jargon, no runaround. Just solid work from someone you can call by name.</p>
                     <div class="about-stats">
                         <div class="stat">
                             <span class="stat-value">CT</span>
@@ -386,14 +396,31 @@
                 </div>
                 <div class="about-visual" aria-hidden="true">
                     <div class="forge-emblem">
+                        <!-- Forge / anvil heritage emblem -->
                         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-                            <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-                            <circle cx="100" cy="100" r="50" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
-                            <polygon points="100,30 170,70 170,130 100,170 30,130 30,70" stroke="currentColor" stroke-width="1" fill="none" opacity="0.4"/>
-                            <polygon points="100,50 150,80 150,120 100,150 50,120 50,80" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
-                            <circle cx="100" cy="100" r="15" fill="currentColor" opacity="0.15"/>
-                            <circle cx="100" cy="100" r="5" fill="currentColor" opacity="0.6"/>
+                            <!-- Outer ring with notch marks like a mill wheel -->
+                            <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="0.75" opacity="0.25"/>
+                            <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+                            <!-- Gear/mill teeth -->
+                            <line x1="100" y1="6" x2="100" y2="16" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <line x1="100" y1="184" x2="100" y2="194" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <line x1="6" y1="100" x2="16" y2="100" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <line x1="184" y1="100" x2="194" y2="100" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <line x1="33" y1="33" x2="40" y2="40" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <line x1="160" y1="160" x2="167" y2="167" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <line x1="167" y1="33" x2="160" y2="40" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <line x1="33" y1="167" x2="40" y2="160" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            <!-- Inner anvil shape -->
+                            <path d="M70 130H130L125 120H75L70 130Z" fill="currentColor" opacity="0.15"/>
+                            <path d="M78 120L82 90H118L122 120" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
+                            <path d="M88 90V75C88 72 90 70 93 70H107C110 70 112 72 112 75V90" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
+                            <circle cx="100" cy="80" r="4" fill="currentColor" opacity="0.2"/>
+                            <!-- Root lines below -->
+                            <path d="M85 130V145" stroke="currentColor" stroke-width="0.75" opacity="0.15" stroke-linecap="round"/>
+                            <path d="M100 130V150" stroke="currentColor" stroke-width="0.75" opacity="0.15" stroke-linecap="round"/>
+                            <path d="M115 130V145" stroke="currentColor" stroke-width="0.75" opacity="0.15" stroke-linecap="round"/>
+                            <path d="M85 145L75 150" stroke="currentColor" stroke-width="0.5" opacity="0.1" stroke-linecap="round"/>
+                            <path d="M115 145L125 150" stroke="currentColor" stroke-width="0.5" opacity="0.1" stroke-linecap="round"/>
                         </svg>
                     </div>
                 </div>
@@ -475,7 +502,7 @@
                             </svg>
                             <div>
                                 <span class="contact-label">Service Area</span>
-                                <span>Central Connecticut</span>
+                                <span>Farmington Valley & Central CT</span>
                             </div>
                         </div>
                         <div class="contact-detail">
@@ -506,15 +533,16 @@
                 <div class="footer-brand">
                     <a href="#" class="logo footer-logo" aria-label="The Forge Digital - Home">
                         <span class="logo-icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <path d="M16 2L4 10V22L16 30L28 22V10L16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                <path d="M16 8L10 12V20L16 24L22 20V12L16 8Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                            <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+                                <path d="M8 28H28L26 24H10L8 28Z" fill="currentColor" opacity="0.9"/>
+                                <path d="M11 24L13 16H23L25 24" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <path d="M15 16V10C15 8.9 15.9 8 17 8H19C20.1 8 21 8.9 21 10V16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <circle cx="18" cy="12" r="1.5" fill="currentColor"/>
                             </svg>
                         </span>
                         <span class="logo-text">The Forge Digital</span>
                     </a>
-                    <p class="footer-tagline">Web Design & IT Support for Connecticut Businesses</p>
+                    <p class="footer-tagline">Web Design & IT Support for Farmington Valley Businesses</p>
                 </div>
                 <nav class="footer-links" aria-label="Footer navigation">
                     <a href="#services">Services</a>
@@ -524,7 +552,7 @@
                 </nav>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 The Forge Digital. All rights reserved.</p>
+                <p>&copy; 2026 The Forge Digital. Made right here in Connecticut.</p>
             </div>
         </div>
     </footer>
