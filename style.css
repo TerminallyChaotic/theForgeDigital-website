@@ -440,6 +440,8 @@ button {
     letter-spacing: -0.02em;
     color: var(--color-text-inverse);
     margin-bottom: var(--space-xl);
+    -webkit-text-stroke: 1.5px #ffffff;
+    text-stroke: 1.5px #ffffff;
 }
 
 .hero-accent {
