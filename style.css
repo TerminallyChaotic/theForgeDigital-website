@@ -455,7 +455,7 @@ button {
 }
 
 .hero-accent {
-    color: #ffffff;
+    color: var(--color-brass);
     font-weight: 700;
     display: block;
 }
