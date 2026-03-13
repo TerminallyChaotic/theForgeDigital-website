@@ -443,7 +443,8 @@ button {
 }
 
 .hero-accent {
-    color: var(--color-brass-light);
+    color: #ffffff;
+    font-weight: 700;
     display: block;
 }
 
