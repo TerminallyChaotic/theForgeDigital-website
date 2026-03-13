@@ -438,13 +438,8 @@ button {
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #ffffff;
+    color: #ffffff !important;
     margin-bottom: var(--space-xl);
-    background: rgba(0, 0, 0, 0.4);
-    padding: 0.2em 0.3em;
-    display: inline-block;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
 }
 
 .hero-accent {
