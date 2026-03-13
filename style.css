@@ -438,17 +438,13 @@ button {
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: var(--color-text-inverse);
+    color: #ffffff;
     margin-bottom: var(--space-xl);
-    text-shadow:
-        -2px -2px 0 #000000,
-        2px -2px 0 #000000,
-        -2px 2px 0 #000000,
-        2px 2px 0 #000000,
-        -2px 0 0 #000000,
-        2px 0 0 #000000,
-        0 -2px 0 #000000,
-        0 2px 0 #000000;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.2em 0.3em;
+    display: inline-block;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .hero-accent {
