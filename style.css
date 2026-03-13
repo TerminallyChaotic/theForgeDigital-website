@@ -418,6 +418,17 @@ button {
         radial-gradient(ellipse 50% 40% at 80% 20%, rgba(168, 150, 104, 0.08) 0%, transparent 50%);
 }
 
+/* Falling shapes canvas - covers upper portion of page */
+.page-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    display: block;
+    z-index: 1;
+}
+
 /* Hero Content */
 .hero-content {
     position: relative;

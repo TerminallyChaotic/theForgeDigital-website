@@ -179,4 +179,117 @@
 
     initActiveNavTracking();
 
+
+    /* ---- FALLING SHAPES ANIMATION ---- */
+    function initFallingShapes() {
+        var canvas = document.getElementById('heroCanvas');
+        if (!canvas) return;
+
+        // Respect reduced motion preference
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            canvas.style.display = 'none';
+            return;
+        }
+
+        var ctx = canvas.getContext('2d');
+        var shapes = [];
+        var animationId;
+
+        // Set canvas size to cover upper portion of page
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            // Make canvas tall enough to cover hero + next 2-3 sections
+            canvas.height = window.innerHeight * 2.5;
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Shape class
+        function Shape(x, y, size, type, opacity) {
+            this.x = x;
+            this.y = y;
+            this.size = size;
+            this.type = type; // 'square', 'circle', 'triangle'
+            this.opacity = opacity;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = Math.random() * 0.5 + 0.3;
+            this.rotation = Math.random() * Math.PI * 2;
+            this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+        }
+
+        Shape.prototype.update = function () {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.rotation += this.rotationSpeed;
+            this.opacity -= 0.002;
+        };
+
+        Shape.prototype.draw = function (ctx) {
+            ctx.save();
+            ctx.globalAlpha = this.opacity;
+            ctx.fillStyle = '#a89668'; // brass color
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.rotation);
+
+            if (this.type === 'square') {
+                ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+            } else if (this.type === 'circle') {
+                ctx.beginPath();
+                ctx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
+                ctx.fill();
+            } else if (this.type === 'triangle') {
+                ctx.beginPath();
+                ctx.moveTo(0, -this.size / 2);
+                ctx.lineTo(this.size / 2, this.size / 2);
+                ctx.lineTo(-this.size / 2, this.size / 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            ctx.restore();
+        };
+
+        function createShape() {
+            var types = ['square', 'circle', 'triangle'];
+            var type = types[Math.floor(Math.random() * types.length)];
+            var size = Math.random() * 30 + 15;
+            var x = Math.random() * canvas.width;
+            var y = -size;
+            var opacity = 0.4;
+            return new Shape(x, y, size, type, opacity);
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Create new shapes occasionally (increased spawn for larger canvas)
+            if (Math.random() < 0.08) {
+                shapes.push(createShape());
+            }
+
+            // Update and draw shapes
+            for (var i = shapes.length - 1; i >= 0; i--) {
+                shapes[i].update();
+                shapes[i].draw(ctx);
+
+                // Remove if off screen or fully transparent
+                if (shapes[i].y > canvas.height || shapes[i].opacity <= 0) {
+                    shapes.splice(i, 1);
+                }
+            }
+
+            animationId = requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function () {
+            cancelAnimationFrame(animationId);
+        });
+    }
+
+    initFallingShapes();
+
 })();
