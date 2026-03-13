@@ -236,6 +236,18 @@ button {
     box-shadow: 0 1px 8px rgba(74, 63, 53, 0.06);
 }
 
+.navbar.scrolled .logo-text {
+    color: var(--color-walnut-dark);
+}
+
+.navbar.scrolled .logo-icon {
+    color: var(--color-accent);
+}
+
+.navbar.scrolled .nav-menu a {
+    color: var(--color-text-secondary);
+}
+
 .nav-container {
     max-width: var(--container-max);
     margin: 0 auto;
@@ -255,10 +267,10 @@ button {
 }
 
 .logo-icon {
-    color: var(--color-accent);
+    color: #ffffff;
     display: flex;
     align-items: center;
-    transition: transform var(--duration-base) var(--ease-out);
+    transition: transform var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
 }
 
 .logo:hover .logo-icon {
@@ -270,7 +282,7 @@ button {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-    color: var(--color-walnut-dark);
+    color: #ffffff;
 }
 
 /* Nav Menu */
@@ -283,7 +295,7 @@ button {
 .nav-menu a {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--color-text-secondary);
+    color: #ffffff;
     transition: color var(--duration-fast) ease;
     position: relative;
 }
@@ -438,7 +450,7 @@ button {
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #ffffff !important;
+    color: var(--color-text-inverse);
     margin-bottom: var(--space-xl);
 }
 
