@@ -256,15 +256,15 @@
             var size = Math.random() * 30 + 15;
             var x = Math.random() * canvas.width;
             var y = -size;
-            var opacity = 0.15; // Much more subtle
+            var opacity = 0.25; // Subtle but visible
             return new Shape(x, y, size, type, opacity);
         }
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Create new shapes occasionally (reduced spawn for smoother effect)
-            if (Math.random() < 0.03) {
+            // Create new shapes occasionally (balanced spawn rate)
+            if (Math.random() < 0.04) {
                 shapes.push(createShape());
             }
 
